@@ -54,9 +54,9 @@ h2{font-size:21px;letter-spacing:-.02em;margin:0 0 4px}
 .pad{padding:20px 24px}
 
 /* key findings, two columns */
-.findings{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--hair);border:1px solid var(--hair);border-radius:14px;overflow:hidden}
-@media (max-width:900px){.findings{grid-template-columns:1fr}}
-.finding{background:var(--paper);padding:19px 22px}
+.findings{display:grid;grid-template-columns:1fr;gap:1px;background:var(--hair);border:1px solid var(--hair);border-radius:14px;overflow:hidden}
+.finding{background:var(--paper);padding:18px 24px;display:grid;grid-template-columns:minmax(280px,32%) 1fr;gap:28px;align-items:baseline}
+@media (max-width:820px){.finding{grid-template-columns:1fr;gap:6px}}
 .finding h3{font-size:14.5px;margin:0 0 6px;letter-spacing:-.01em}
 .finding p{font-size:13.5px;color:var(--muted);margin:0;line-height:1.55}
 
@@ -120,7 +120,6 @@ table.pct tr.total td{background:#F7F8FA;font-weight:600}
   <div class="head">
     <div>
       <h1>Conversion Insights</h1>
-      <p class="headsub">Where users enter, where they leave, and how long each stage takes.</p>
     </div>
   </div>
 
@@ -137,8 +136,7 @@ table.pct tr.total td{background:#F7F8FA;font-weight:600}
 
   <section>
     <p class="eyebrow">Summary</p>
-    <h2>Key findings</h2>
-    <p class="note">Six observations from the current window, ordered by size of opportunity.</p>
+    <h2>Key Findings</h2>
     <div class="findings">
       <div class="finding">
         <h3>Silent authentication is worth 23 points of conversion</h3>
@@ -169,8 +167,8 @@ table.pct tr.total td{background:#F7F8FA;font-weight:600}
 
   <section>
     <p class="eyebrow">Headline metrics</p>
-    <h2>Performance against manual intake</h2>
-    <p class="note">Compared with the form-based flow this replaced.</p>
+    <h2>Performance Metrics Relative to Manual Intake</h2>
+    <p class="note">Change figures are month over month.</p>
     <div class="kpis">
       <div class="kpi"><p class="lab">Intent to booked</p><b>52.6%</b><em>+14.2 pts</em></div>
       <div class="kpi"><p class="lab">Median time to booked</p><b>1m 48s</b><em>&minus;4m 12s</em></div>
@@ -182,8 +180,7 @@ table.pct tr.total td{background:#F7F8FA;font-weight:600}
 
   <section>
     <p class="eyebrow">Funnel performance</p>
-    <h2>Stage by stage</h2>
-    <p class="note">Step conversion is measured against the previous stage.</p>
+    <h2>Funnel Performance by Stage</h2>
     <div class="card" id="funnel"></div>
   </section>
 
@@ -191,7 +188,7 @@ table.pct tr.total td{background:#F7F8FA;font-weight:600}
     <div class="split">
       <div>
         <p class="eyebrow">Identity</p>
-        <h2>How identity was confirmed</h2>
+        <h2>How Identity Was Confirmed</h2>
         <p class="note">Right column is the share of those sessions that reach a booking.</p>
         <div class="card pad">
           <div class="mix">
@@ -215,7 +212,7 @@ table.pct tr.total td{background:#F7F8FA;font-weight:600}
 
       <div>
         <p class="eyebrow">Coverage</p>
-        <h2>Insurance recovery</h2>
+        <h2>Insurance Recovery</h2>
         <p class="note">Lookup runs behind the scheduling screen; 96% resolve before the user selects a slot.</p>
         <div class="card pad">
           <div class="legend">
@@ -235,7 +232,7 @@ table.pct tr.total td{background:#F7F8FA;font-weight:600}
 
   <section>
     <p class="eyebrow">Latency</p>
-    <h2>Time spent at each stage</h2>
+    <h2>Time Spent at Each Stage</h2>
     <p class="note">Seconds per session. p95 is where the slowest sessions abandon.</p>
     <div class="card"><table class="pct" id="pcttable"></table></div>
   </section>
